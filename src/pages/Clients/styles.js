@@ -9,6 +9,6 @@ export const CustomContainer = styled.div`
 
 export const TableContainer = styled.div`
   height: 400px;
-  width: 50vw;
+  width: 900px;
   margin: 60px auto;
 `;
