@@ -24,9 +24,21 @@ export const AuthProvider = ({ children }) => {
     }
   }
 
+  // async function Register(email, password, password_confirmation, name) {
+  //   try {
+
+  //     // console.log(response.status);
+  //     // setUser(data.access_token);
+  //     // localStorage.setItem("sysfar", data.access_token);
+  //     return true;
+  //   } catch (error) {
+  //     console.log(error.response.data.error);
+  //   }
+  // }
+
   async function Logout() {
     setUser(null);
-    localStorage.removeItem("listfav-signed");
+    localStorage.removeItem("sysfar");
   }
 };
 

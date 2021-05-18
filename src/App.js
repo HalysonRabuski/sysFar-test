@@ -6,6 +6,7 @@ import GlobalStyles from "./styles/GlobalStyles";
 import theme from "./styles/theme";
 import { useAuth } from "./contexts/useAuth";
 import { apiSysFar } from "./services/apiSysFar";
+import TopBar from "./components/TopBar";
 
 function App() {
   const context = useAuth();
@@ -17,7 +18,6 @@ function App() {
     (error) => {
       if (error.response.status === 401) {
         context.Logout();
-        alert("Sessão expirada");
       }
       return error;
     }
@@ -26,7 +26,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
+
       <Router>
+        <TopBar />
         <Routes />
       </Router>
     </ThemeProvider>

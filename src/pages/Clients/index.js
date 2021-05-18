@@ -30,7 +30,7 @@ function Clients(props) {
       renderCell: (params) => {
         return (
           <>
-            <Link to={`/clients/${params.row.id}`}>
+            <Link to={`/clientes/${params.row.id}`}>
               <Button mr={1} variant="contained" color="primary">
                 Edit
               </Button>
@@ -76,7 +76,7 @@ function Clients(props) {
     <CustomContainer>
       <Typography variant="h2">Clientes</Typography>
       <Typography variant="h3">Tabela de Clientes</Typography>
-      <Link to="/clients/novo">
+      <Link to="/clientes/novo">
         <Button variant="contained" color="primary">
           Novo Cliente
         </Button>

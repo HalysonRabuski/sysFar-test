@@ -31,7 +31,7 @@ function NewClient(props) {
       }
     );
 
-    if (data) props.history.push("/clients");
+    if (data) props.history.push("/clientes");
   }
 
   return (

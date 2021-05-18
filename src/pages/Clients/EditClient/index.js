@@ -19,7 +19,7 @@ function EditClient(props) {
   const auth = useAuth();
 
   async function getUserById() {
-    const { data } = await apiSysFar.get(`/clients/${props.match.params.id}`, {
+    const { data } = await apiSysFar.get(`/clientes/${props.match.params.id}`, {
       headers: {
         Authorization: `Bearer ${auth.jwt}`,
       },

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   OutlinedInput,
   InputLabel,
@@ -10,9 +10,15 @@ import { LoginContainer, StyledFormControl, StyledCard } from "./styles";
 import Button from "../../components/Button";
 import { useAuth } from "../../contexts/useAuth";
 
-function SignIn() {
+function SignIn(props) {
   const context = useAuth();
   const [error, setError] = useState(false);
+
+  useEffect(() => {
+    if (context.jwt) {
+      props.history.push("clientes");
+    }
+  }, [context.jwt]);
 
   async function handleLogin(e) {
     e.preventDefault();

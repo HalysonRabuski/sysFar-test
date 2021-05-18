@@ -5,15 +5,17 @@ import Clients from "../pages/Clients";
 import NewClient from "../pages/Clients/NewClient";
 import EditClient from "../pages/Clients/EditClient";
 import SignIn from "../pages/SignIn";
+import Register from "../pages/Register";
 
 function Routes() {
   return (
     <Switch>
-      <ProtectedRoute exact path="/clients" component={Clients} />
-      <ProtectedRoute path="/clients/novo" component={NewClient} />
-      <ProtectedRoute path="/clients/:id" component={EditClient} />
+      <ProtectedRoute exact path="/clientes" component={Clients} />
+      <ProtectedRoute path="/clientes/novo" component={NewClient} />
+      <ProtectedRoute path="/clientes/:id" component={EditClient} />
       {/* <Route exact path="/clients/novo" component={NewClient} /> */}
       <Route exact path="/sign" component={SignIn} />
+      <Route exact path="/registrar" component={Register} />
     </Switch>
   );
 }
